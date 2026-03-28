@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
-:root{--bg:#0e1428;--bg2:#141930;--bg3:#1a2038;--txt:#e8e8e0;--txt2:#888;--txt3:#444;--red:#c8102e;--gold:#d4a843;--green:#2ecc71;--blue:#3a7bd5;--stone:#c8b89a;--stone2:#a89070}
+:root{--bg:#1c0e04;--bg2:#251408;--bg3:#301a0a;--txt:#e8e8e0;--txt2:#888;--txt3:#444;--red:#c8102e;--gold:#d4a843;--green:#2ecc71;--blue:#3a7bd5;--stone:#c8b89a;--stone2:#a89070}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{font-family:Arial,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;overflow-x:hidden;user-select:none}
 
@@ -31,7 +31,7 @@ body{font-family:Arial,sans-serif;background:var(--bg);color:var(--txt);min-heig
 
 /* PAGE 1 — FLASHCARDS */
 .p1-ctrl{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;align-items:center;position:relative;z-index:1}
-.p1-ctrl select,.p1-ctrl button{font-size:12px;padding:0 10px;height:34px;border:1px solid var(--bg3);border-radius:8px;background:var(--bg2);color:var(--txt);cursor:pointer}
+.p1-ctrl select,.p1-ctrl button{font-size:12px;padding:0 10px;height:34px;border:1px solid var(--bg3);border-radius:8px;background:rgba(30,16,6,.9);color:var(--txt);cursor:pointer}
 .save-row{display:flex;gap:6px;margin-bottom:10px;align-items:center;flex-wrap:wrap;position:relative;z-index:1}
 .save-row span{font-size:10px;color:var(--txt3)}
 .btn-save{background:#0a1a30!important;color:#4a9eff!important;border-color:#153060!important;font-size:12px;padding:0 10px;height:34px;border:1px solid;border-radius:8px;cursor:pointer}
@@ -43,10 +43,10 @@ body{font-family:Arial,sans-serif;background:var(--bg);color:var(--txt);min-heig
 .ok-c{color:var(--green)}
 .ko-c{color:var(--red)}
 .pbar{height:3px;background:var(--bg2);border-radius:2px;margin-bottom:8px;position:relative;z-index:1}
-.pfill{height:100%;background:var(--red);border-radius:2px;transition:width .3s}
+.pfill{height:100%;background:#c8a050;border-radius:2px;transition:width .3s}
 .flt-row{display:flex;gap:6px;align-items:center;margin-bottom:10px;flex-wrap:wrap;position:relative;z-index:1}
 .flt-row label{font-size:11px;color:var(--txt2)}
-.flt-row select{font-size:12px;padding:0 10px;height:32px;border:1px solid var(--bg3);border-radius:8px;background:var(--bg2);color:var(--txt);cursor:pointer}
+.flt-row select{font-size:12px;padding:0 10px;height:32px;border:1px solid var(--bg3);border-radius:8px;background:rgba(30,16,6,.9);color:var(--txt);cursor:pointer}
 .flashcard{background:var(--bg2);border:1px solid var(--bg3);border-radius:16px;padding:20px 16px;cursor:pointer;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:10px;transition:border-color .15s,transform .1s;position:relative;z-index:1}
 .flashcard:active{transform:scale(.98)}
 .flashcard:hover{border-color:#333}
@@ -61,7 +61,7 @@ body{font-family:Arial,sans-serif;background:var(--bg);color:var(--txt);min-heig
 .fact-dot{color:var(--red);font-weight:700;min-width:12px;flex-shrink:0}
 .card-nav{display:flex;gap:6px;justify-content:center;align-items:center;margin-bottom:10px;position:relative;z-index:1}
 .card-nav-i{font-size:12px;color:var(--txt2);min-width:80px;text-align:center}
-.card-nav button{font-size:12px;padding:0 14px;height:34px;border:1px solid var(--bg3);border-radius:8px;background:var(--bg2);color:var(--txt);cursor:pointer}
+.card-nav button{font-size:12px;padding:0 14px;height:34px;border:1px solid var(--bg3);border-radius:8px;background:rgba(30,16,6,.9);color:var(--txt);cursor:pointer}
 .vote-row{display:flex;gap:8px;justify-content:center;margin-bottom:8px;position:relative;z-index:1}
 .vote-row button{flex:1;max-width:170px;font-size:13px;height:44px;border-radius:10px;cursor:pointer;font-weight:500;border:1px solid}
 .btn-ok{background:#0a1f12!important;color:var(--green)!important;border-color:#154028!important}
@@ -136,7 +136,7 @@ body{font-family:Arial,sans-serif;background:var(--bg);color:var(--txt);min-heig
 /* TOAST */
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--txt);color:var(--bg);font-size:13px;padding:8px 18px;border-radius:16px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999;white-space:nowrap}
 .toast.show{opacity:1}
-body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 40%,rgba(30,50,120,.12) 0%,transparent 60%),radial-gradient(ellipse at 70% 60%,rgba(20,40,100,.10) 0%,transparent 50%);pointer-events:none;z-index:0}
+body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%23231408'/%3E%3C!-- Diamond tile --%3E%3Cpolygon points='30,2 58,30 30,58 2,30' fill='%232e1c0a' stroke='%23c8a870' stroke-width='1.2'/%3E%3Cpolygon points='30,8 52,30 30,52 8,30' fill='%23271608' stroke='%23a08040' stroke-width='0.6'/%3E%3C!-- Center ornament --%3E%3Ccircle cx='30' cy='30' r='3' fill='%23c8a050' opacity='0.6'/%3E%3Ccircle cx='30' cy='30' r='1.5' fill='%23e8c070' opacity='0.5'/%3E%3C!-- Corner dots --%3E%3Ccircle cx='0' cy='0' r='2' fill='%23c8a050' opacity='0.4'/%3E%3Ccircle cx='60' cy='0' r='2' fill='%23c8a050' opacity='0.4'/%3E%3Ccircle cx='0' cy='60' r='2' fill='%23c8a050' opacity='0.4'/%3E%3Ccircle cx='60' cy='60' r='2' fill='%23c8a050' opacity='0.4'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
 </style>
 </head>
 <body>
@@ -161,58 +161,58 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:
 <div class="col-deco left">
 <svg viewBox="0 0 48 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
   <!-- Abacus (top slab) -->
-  <rect x="1" y="0" width="46" height="10" rx="1" fill="#2a3050" stroke="#3a4068" stroke-width="0.8"/>
-  <rect x="0" y="8" width="48" height="6" rx="1" fill="#222840" stroke="#3a4068" stroke-width="0.8"/>
+  <rect x="1" y="0" width="46" height="10" rx="1" fill="#3a2810" stroke="#c8a060" stroke-width="0.8"/>
+  <rect x="0" y="8" width="48" height="6" rx="1" fill="#2a1c08" stroke="#c8a060" stroke-width="0.8"/>
   <!-- Echinus (ovolo cushion) -->
-  <ellipse cx="24" cy="22" rx="22" ry="8" fill="#1e2438" stroke="#3a4068" stroke-width="0.8"/>
+  <ellipse cx="24" cy="22" rx="22" ry="8" fill="#221808" stroke="#c8a060" stroke-width="0.8"/>
   <!-- Neck of capital -->
-  <rect x="6" y="22" width="36" height="8" rx="1" fill="#1a2030"/>
+  <rect x="6" y="22" width="36" height="8" rx="1" fill="#1e1606"/>
   <!-- Annuli (rings) -->
-  <line x1="6" y1="24" x2="42" y2="24" stroke="#2a3450" stroke-width="1"/>
-  <line x1="6" y1="26" x2="42" y2="26" stroke="#2a3450" stroke-width="1"/>
-  <line x1="6" y1="28" x2="42" y2="28" stroke="#2a3450" stroke-width="1"/>
+  <line x1="6" y1="24" x2="42" y2="24" stroke="#8a6030" stroke-width="1"/>
+  <line x1="6" y1="26" x2="42" y2="26" stroke="#8a6030" stroke-width="1"/>
+  <line x1="6" y1="28" x2="42" y2="28" stroke="#8a6030" stroke-width="1"/>
   <!-- Shaft -->
-  <rect x="8" y="30" width="32" height="640" fill="#18202e" stroke="#252d42" stroke-width="0.8"/>
+  <rect x="8" y="30" width="32" height="640" fill="#1a1206" stroke="#3a2810" stroke-width="0.8"/>
   <!-- Fluting channels (vertical grooves) - 8 flutes -->
-  <line x1="11" y1="32" x2="11" y2="668" stroke="#1e2840" stroke-width="1.5"/>
-  <line x1="15" y1="32" x2="15" y2="668" stroke="#1e2840" stroke-width="1.5"/>
-  <line x1="19" y1="32" x2="19" y2="668" stroke="#1e2840" stroke-width="1.5"/>
-  <line x1="23" y1="32" x2="23" y2="668" stroke="#1e2840" stroke-width="1.5"/>
-  <line x1="27" y1="32" x2="27" y2="668" stroke="#1e2840" stroke-width="1.5"/>
-  <line x1="31" y1="32" x2="31" y2="668" stroke="#1e2840" stroke-width="1.5"/>
-  <line x1="35" y1="32" x2="35" y2="668" stroke="#1e2840" stroke-width="1.5"/>
+  <line x1="11" y1="32" x2="11" y2="668" stroke="#6a4820" stroke-width="1.5"/>
+  <line x1="15" y1="32" x2="15" y2="668" stroke="#6a4820" stroke-width="1.5"/>
+  <line x1="19" y1="32" x2="19" y2="668" stroke="#6a4820" stroke-width="1.5"/>
+  <line x1="23" y1="32" x2="23" y2="668" stroke="#6a4820" stroke-width="1.5"/>
+  <line x1="27" y1="32" x2="27" y2="668" stroke="#6a4820" stroke-width="1.5"/>
+  <line x1="31" y1="32" x2="31" y2="668" stroke="#6a4820" stroke-width="1.5"/>
+  <line x1="35" y1="32" x2="35" y2="668" stroke="#6a4820" stroke-width="1.5"/>
   <!-- Shaft highlight (light from left) -->
   <rect x="8" y="30" width="6" height="640" fill="white" opacity="0.04"/>
   <!-- Entasis (slight bulge at center) - subtle highlight -->
   <rect x="9" y="200" width="4" height="300" rx="2" fill="white" opacity="0.03"/>
   <!-- Base steps -->
-  <rect x="4" y="668" width="40" height="10" rx="1" fill="#1e2840" stroke="#2a3458" stroke-width="0.8"/>
-  <rect x="1" y="676" width="46" height="10" rx="1" fill="#222a45" stroke="#2a3458" stroke-width="0.8"/>
-  <rect x="0" y="684" width="48" height="16" rx="1" fill="#26304e" stroke="#2a3458" stroke-width="0.8"/>
+  <rect x="4" y="668" width="40" height="10" rx="1" fill="#6a4820" stroke="#8a6030" stroke-width="0.8"/>
+  <rect x="1" y="676" width="46" height="10" rx="1" fill="#2a1c08" stroke="#8a6030" stroke-width="0.8"/>
+  <rect x="0" y="684" width="48" height="16" rx="1" fill="#3a2812" stroke="#8a6030" stroke-width="0.8"/>
 </svg>
 </div>
 <div class="col-deco right">
 <svg viewBox="0 0 48 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-  <rect x="1" y="0" width="46" height="10" rx="1" fill="#2a3050" stroke="#3a4068" stroke-width="0.8"/>
-  <rect x="0" y="8" width="48" height="6" rx="1" fill="#222840" stroke="#3a4068" stroke-width="0.8"/>
-  <ellipse cx="24" cy="22" rx="22" ry="8" fill="#1e2438" stroke="#3a4068" stroke-width="0.8"/>
-  <rect x="6" y="22" width="36" height="8" rx="1" fill="#1a2030"/>
-  <line x1="6" y1="24" x2="42" y2="24" stroke="#2a3450" stroke-width="1"/>
-  <line x1="6" y1="26" x2="42" y2="26" stroke="#2a3450" stroke-width="1"/>
-  <line x1="6" y1="28" x2="42" y2="28" stroke="#2a3450" stroke-width="1"/>
-  <rect x="8" y="30" width="32" height="640" fill="#18202e" stroke="#252d42" stroke-width="0.8"/>
-  <line x1="11" y1="32" x2="11" y2="668" stroke="#1e2840" stroke-width="1.5"/>
-  <line x1="15" y1="32" x2="15" y2="668" stroke="#1e2840" stroke-width="1.5"/>
-  <line x1="19" y1="32" x2="19" y2="668" stroke="#1e2840" stroke-width="1.5"/>
-  <line x1="23" y1="32" x2="23" y2="668" stroke="#1e2840" stroke-width="1.5"/>
-  <line x1="27" y1="32" x2="27" y2="668" stroke="#1e2840" stroke-width="1.5"/>
-  <line x1="31" y1="32" x2="31" y2="668" stroke="#1e2840" stroke-width="1.5"/>
-  <line x1="35" y1="32" x2="35" y2="668" stroke="#1e2840" stroke-width="1.5"/>
+  <rect x="1" y="0" width="46" height="10" rx="1" fill="#3a2810" stroke="#c8a060" stroke-width="0.8"/>
+  <rect x="0" y="8" width="48" height="6" rx="1" fill="#2a1c08" stroke="#c8a060" stroke-width="0.8"/>
+  <ellipse cx="24" cy="22" rx="22" ry="8" fill="#221808" stroke="#c8a060" stroke-width="0.8"/>
+  <rect x="6" y="22" width="36" height="8" rx="1" fill="#1e1606"/>
+  <line x1="6" y1="24" x2="42" y2="24" stroke="#8a6030" stroke-width="1"/>
+  <line x1="6" y1="26" x2="42" y2="26" stroke="#8a6030" stroke-width="1"/>
+  <line x1="6" y1="28" x2="42" y2="28" stroke="#8a6030" stroke-width="1"/>
+  <rect x="8" y="30" width="32" height="640" fill="#1a1206" stroke="#3a2810" stroke-width="0.8"/>
+  <line x1="11" y1="32" x2="11" y2="668" stroke="#6a4820" stroke-width="1.5"/>
+  <line x1="15" y1="32" x2="15" y2="668" stroke="#6a4820" stroke-width="1.5"/>
+  <line x1="19" y1="32" x2="19" y2="668" stroke="#6a4820" stroke-width="1.5"/>
+  <line x1="23" y1="32" x2="23" y2="668" stroke="#6a4820" stroke-width="1.5"/>
+  <line x1="27" y1="32" x2="27" y2="668" stroke="#6a4820" stroke-width="1.5"/>
+  <line x1="31" y1="32" x2="31" y2="668" stroke="#6a4820" stroke-width="1.5"/>
+  <line x1="35" y1="32" x2="35" y2="668" stroke="#6a4820" stroke-width="1.5"/>
   <rect x="8" y="30" width="6" height="640" fill="white" opacity="0.04"/>
   <rect x="9" y="200" width="4" height="300" rx="2" fill="white" opacity="0.03"/>
-  <rect x="4" y="668" width="40" height="10" rx="1" fill="#1e2840" stroke="#2a3458" stroke-width="0.8"/>
-  <rect x="1" y="676" width="46" height="10" rx="1" fill="#222a45" stroke="#2a3458" stroke-width="0.8"/>
-  <rect x="0" y="684" width="48" height="16" rx="1" fill="#26304e" stroke="#2a3458" stroke-width="0.8"/>
+  <rect x="4" y="668" width="40" height="10" rx="1" fill="#6a4820" stroke="#8a6030" stroke-width="0.8"/>
+  <rect x="1" y="676" width="46" height="10" rx="1" fill="#2a1c08" stroke="#8a6030" stroke-width="0.8"/>
+  <rect x="0" y="684" width="48" height="16" rx="1" fill="#3a2812" stroke="#8a6030" stroke-width="0.8"/>
 </svg>
 </div>
 
